@@ -1,0 +1,14 @@
+<h1>Forum overzicht</h1>
+<a href="index/add">Topic aanmaken</a><br />
+
+<?php
+if( count( $this->items ) > 0 )
+{
+	foreach( $this->items as $item )
+	{
+		echo '<a href="index/view/id/' . $item['id'] . '">' . $item['title'] . '</a><br />';
+	}
+}else{
+	echo 'No topics found.';
+}
+?>
